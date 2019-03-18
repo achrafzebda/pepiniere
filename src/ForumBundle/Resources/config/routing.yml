@@ -1,0 +1,3 @@
+forum_homepage:
+    path:     /ajoutersujet
+    defaults: { _controller: ForumBundle:Sujet:ajoutsujet }
