@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Entity;
+namespace ForumBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * AvisProduit
+ * AvisService
  *
- * @ORM\Table(name="avis_produit", indexes={@ORM\Index(name="id_client", columns={"id_client"}), @ORM\Index(name="id_produit", columns={"id_produit"})})
+ * @ORM\Table(name="avis_service", indexes={@ORM\Index(name="id_client", columns={"id_client"}), @ORM\Index(name="id_service", columns={"id_service"})})
  * @ORM\Entity
  */
-class AvisProduit
+class AvisService
 {
     /**
      * @var integer
@@ -31,9 +31,16 @@ class AvisProduit
     /**
      * @var integer
      *
-     * @ORM\Column(name="id_produit", type="integer", nullable=false)
+     * @ORM\Column(name="id_service", type="integer", nullable=false)
      */
-    private $idProduit;
+    private $idService;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nom_avis", type="string", length=255, nullable=true)
+     */
+    private $nomAvis;
 
     /**
      * @var string
@@ -45,9 +52,9 @@ class AvisProduit
     /**
      * @var string
      *
-     * @ORM\Column(name="nom_produit", type="string", length=255, nullable=true)
+     * @ORM\Column(name="nom_service", type="string", length=255, nullable=true)
      */
-    private $nomProduit;
+    private $nomService;
 
     /**
      * @var string

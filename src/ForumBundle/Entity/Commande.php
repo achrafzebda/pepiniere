@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Entity;
+namespace ForumBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -24,7 +24,7 @@ class Commande
     /**
      * @var string
      *
-     * @ORM\Column(name="etat_cmd", type="string", length=255, nullable=true)
+     * @ORM\Column(name="etat_cmd", type="string", length=255, nullable=false)
      */
     private $etatCmd;
 

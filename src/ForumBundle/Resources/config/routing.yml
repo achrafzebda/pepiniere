@@ -1,3 +1,10 @@
+forum_sujet:
+    resource: "@ForumBundle/Resources/config/routing/sujet.yml"
+    prefix:   /sujet
+
 forum_homepage:
+    path:     /
+    defaults: { _controller: ForumBundle:Default:index }
+ajouter_sujet:
     path:     /ajoutersujet
-    defaults: { _controller: ForumBundle:Sujet:ajoutsujet }
+    defaults: { _controller: ForumBundle:Sujet:Ajout }

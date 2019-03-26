@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Entity;
+namespace ForumBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 

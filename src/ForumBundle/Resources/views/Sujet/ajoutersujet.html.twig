@@ -1,23 +1,48 @@
 {% extends 'baseback.html.twig' %}
 
+{#{% block head %}
+
+
+    <!-- Select2 -->
+    <link rel="stylesheet" href="{{ asset('assets/plugins/select2/select2.css') }}" />
+    <!-- Multi Select Css -->
+    <link rel="stylesheet" href="{{ asset('assets/plugins/multi-select/css/multi-select.css') }}">
+
+{% endblock %}
+#}
+
 {% block content %}
-    <h2 class="card-inside-title">Basic Examples</h2>
-    <div class="row clearfix">
-        <form method="POST">
-        <div class="col-sm-12">
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Nom" />
-            </div>
-            <div class="form-group">
-                <input type="password" class="form-control" placeholder="Password" />
-            </div>
-            <div class="form-group">
-                <input type="password" class="form-control" placeholder="Password" />
-            </div>
-            <div class="form-group">
-                <input type="password" class="form-control" placeholder="Password" />
+
+    <form  method="post">
+        <h2 class="card-inside-title">Ajouter sujet</h2>
+        <div class="row clearfix js-sweetalert">
+
+            <div class="col-sm-12">
+
+                <p><strong>Sujet :</strong></p>
+                <label> Nom Sujet</label>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="nom sujet..." name="nomS"/>
+                </div>
+
+                <button class="btn btn-raised btn-primary waves-effect" data-type="success" name="ajout">CLICK ME</button>
             </div>
         </div>
-        </form>
-    </div>
+    </form>
+
+
+
+
+    {#<h1>Ajouter Sujet</h1>
+        {{ form(form) }#}
+
+
+
+   {# {{ form_widget(form) }}
+        <input class="btn btn-success" type="submit" value="Ajouter"/>
+      {{ form_end(form) }}
+    #}
+
 {% endblock %}
+
+

@@ -1,0 +1,20 @@
+{% extends 'baseback.html.twig' %}
+
+{% block content %}
+    <h1>Sujet creation</h1>
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+    <div class="row clearfix js-sweetalert">
+    <button class="btn btn-raised btn-primary waves-effect" data-type="success" name="ajout" type="submit">CLICK ME</button>
+    </div>
+    {{ form_end(form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('sujet_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}
+
+

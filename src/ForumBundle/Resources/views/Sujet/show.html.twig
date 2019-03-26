@@ -1,0 +1,74 @@
+{% extends 'baseback.html.twig' %}
+
+{% block content %}
+
+
+    <h1>Sujet</h1>
+    <div class="container-fluid">
+        <div class="row clearfix">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="body">
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-4 col-md-12">
+                                <div class="preview preview-pic tab-content">
+                                    <div class="tab-pane active" id="product_1"><img src="assets/images/ecommerce/1.png" class="img-fluid" alt="" /></div>
+                                    {{ sujet.image }}
+                                </div>
+                            </div>
+
+                            <div class="col-xl-9 col-lg-8 col-md-12">
+                                <div class="product details">
+
+                                    <h4 class="product-title mb-0">{{ sujet.nomSujet }}</h4>
+
+                                    <span class="col-amber">{{ sujet.type }}</span>
+
+                                    <div class="rating">
+                                        <div class="stars">
+                                            <span class="zmdi zmdi-star col-amber"></span>
+                                            <span class="zmdi zmdi-star col-amber"></span>
+                                            <span class="zmdi zmdi-star col-amber"></span>
+                                            <span class="zmdi zmdi-star col-amber"></span>
+                                            <span class="zmdi zmdi-star-outline"></span>
+                                        </div>
+                                        <span class="m-l-10">5 commentaires</span>
+                                    </div>
+                                    <hr>
+                                    <p class="product-description">
+                                        {{ sujet.description }}
+                                    </p>
+
+                                    <h5 class="sizes">{{ sujet.nomAgent }}
+                                        <span class="size" title="xtra large"> {% if sujet.dateCreation %}{{ sujet.dateCreation|date('Y-m-d H:i') }}{% endif %}</span>
+                                    </h5>
+
+                                    {# <p>Nomcategoriesujet</p>
+                                         {{ sujet.nomCategorieSujet }}
+                                     #}
+                                    <ul>
+                                        <li>
+                                            <a href="{{ path('sujet_index') }}">Back to the list</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ path('sujet_edit', { 'idSujet': sujet.idSujet }) }}">Edit</a>
+                                        </li>
+                                        <li>
+                                            {{ form_start(delete_form) }}
+                                            <input type="submit" value="Delete">
+                                            {{ form_end(delete_form) }}
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}

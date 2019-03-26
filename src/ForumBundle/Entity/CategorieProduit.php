@@ -1,32 +1,32 @@
 <?php
 
-namespace App\Entity;
+namespace ForumBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * CategorieSujet
+ * CategorieProduit
  *
- * @ORM\Table(name="categorie_sujet")
+ * @ORM\Table(name="categorie_produit")
  * @ORM\Entity
  */
-class CategorieSujet
+class CategorieProduit
 {
     /**
      * @var integer
      *
-     * @ORM\Column(name="id_categorie_sujet", type="integer", nullable=false)
+     * @ORM\Column(name="id_categorie", type="integer", nullable=false)
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $idCategorieSujet;
+    private $idCategorie;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="nom_categorie_sujet", type="string", length=255, nullable=true)
+     * @ORM\Column(name="nom_categorie", type="string", length=255, nullable=true)
      */
-    private $nomCategorieSujet;
+    private $nomCategorie;
 
     /**
      * @var string
